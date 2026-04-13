@@ -108,6 +108,11 @@
    }
    .top-bar-left { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
    .top-bar-item { display: flex; align-items: center; gap: 0.4rem; }
+   a.top-bar-item.top-bar-address-link {
+     color: rgba(255,255,255,0.85);
+     text-decoration: none;
+   }
+   a.top-bar-item.top-bar-address-link:hover { color: var(--saffron-light); }
    .top-bar-item a { color: rgba(255,255,255,0.85); }
    .top-bar-item a:hover { color: var(--saffron-light); }
    .top-bar-right { display: flex; align-items: center; gap: 0.8rem; }
