@@ -262,36 +262,29 @@
    
    /* ─── Page Hero Banner ───────────────────── */
    .page-hero {
-     background: linear-gradient(135deg, var(--dark-brown) 0%, var(--mid-brown) 100%);
-     padding: 5rem 2rem;
+     --page-hero-bg: linear-gradient(135deg, var(--dark-brown) 0%, var(--mid-brown) 100%);
+     background-color: var(--dark-brown);
+     background-image: var(--page-hero-bg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     padding: clamp(3.5rem, 12vw, 5.5rem) 2rem;
      text-align: center;
      position: relative;
      overflow: hidden;
-   }
-   .page-hero::before {
-     content: '';
-     position: absolute;
-     inset: 0;
-     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4892a' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+     min-height: min(320px, 42vw);
+     display: flex;
+     align-items: center;
+     justify-content: center;
    }
    .page-hero-content { position: relative; z-index: 1; }
    .page-hero h1 {
      font-size: clamp(2.5rem, 5vw, 4rem);
      color: white;
-     margin-bottom: 0.5rem;
-     font-weight: 300;
+     margin-bottom: 0;
+     font-weight: 600;
      letter-spacing: 0.03em;
    }
-   .page-hero .breadcrumb {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 0.5rem;
-     font-size: 0.9rem;
-     color: rgba(255,255,255,0.6);
-   }
-   .page-hero .breadcrumb a { color: var(--saffron-light); }
-   .page-hero .breadcrumb a:hover { color: white; }
    
    /* ─── Section Styles ─────────────────────── */
    .section { padding: 5rem 2rem; }
@@ -792,7 +785,7 @@
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(3rem, 6vw, 5.5rem);
-    font-weight: 300;
+    font-weight: 600;
     color: rgba(255,255,255,0.92);
     line-height: 1.05;
     margin-bottom: 1.25rem;
@@ -800,13 +793,14 @@
   }
   .hero-title-accent {
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--saffron-light);
   }
   
   .hero-desc {
     font-family: 'Jost', sans-serif;
     font-size: 1rem;
+    font-weight: 500;
     color: rgba(255,255,255,0.65);
     line-height: 1.7;
     margin-bottom: 2rem;
