@@ -34,6 +34,7 @@
   }
   </script>
   <link rel="stylesheet" href="style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .catering-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
@@ -124,54 +125,51 @@
         <div class="form-card">
           <h3>Request Catering</h3>
           <p class="form-subtitle">Fill out the form below and our team will get back to you within 24 hours.</p>
-          <div id="cateringForm">
+          <form id="catering-form" data-form-type="catering" method="post" action="#" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">First Name *</label>
-                <input type="text" class="form-control" placeholder="John" id="fname">
+                <label class="form-label">Full Name *</label>
+                <input type="text" name="full_name" class="form-control" placeholder="Your full name" id="fullName" required autocomplete="name">
               </div>
               <div class="form-group">
-                <label class="form-label">Last Name *</label>
-                <input type="text" class="form-control" placeholder="Doe" id="lname">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" name="phone" class="form-control" placeholder="+1 (555) 000-0000" id="phone" required autocomplete="tel">
               </div>
             </div>
             <div class="form-group">
               <label class="form-label">Email Address *</label>
-              <input type="email" class="form-control" placeholder="john@example.com" id="email">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Phone Number *</label>
-              <input type="tel" class="form-control" placeholder="+1 (555) 000-0000" id="phone">
+              <input type="email" name="email" class="form-control" placeholder="john@example.com" id="email" required autocomplete="email">
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label">Event Type</label>
-                <select class="form-control" id="eventType">
+                <select name="event_type" class="form-control" id="eventType">
                   <option value="">Select event type</option>
-                  <option>Wedding</option>
-                  <option>Corporate Event</option>
-                  <option>Birthday Party</option>
-                  <option>Religious Ceremony</option>
-                  <option>Outdoor Event</option>
-                  <option>Other</option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Corporate Event">Corporate Event</option>
+                  <option value="Birthday Party">Birthday Party</option>
+                  <option value="Religious Ceremony">Religious Ceremony</option>
+                  <option value="Outdoor Event">Outdoor Event</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div class="form-group">
                 <label class="form-label">Guest Count</label>
-                <input type="number" class="form-control" placeholder="e.g. 50" id="guests">
+                <input type="number" name="guest_count" class="form-control" placeholder="e.g. 50" id="guests" min="1">
               </div>
             </div>
             <div class="form-group">
               <label class="form-label">Event Date</label>
-              <input type="date" class="form-control" id="eventDate">
+              <input type="date" name="event_date" class="form-control" id="eventDate">
             </div>
             <div class="form-group">
               <label class="form-label">Special Requirements / Message</label>
-              <textarea class="form-control" placeholder="Tell us about your event, dietary requirements, preferred dishes..." id="message"></textarea>
+              <textarea name="message" class="form-control" placeholder="Tell us about your event, dietary requirements, preferred dishes..." id="message"></textarea>
             </div>
-            <button class="btn btn-primary" onclick="submitCatering()" style="width:100%; justify-content:center;">Submit Request</button>
-            <div class="success-msg" id="successMsg">✅ Thank you! Your catering request has been submitted. We'll contact you within 24 hours.</div>
-          </div>
+            <div class="g-recaptcha" data-sitekey=""></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit Request</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </div>
@@ -189,21 +187,10 @@
 <div id="footer-placeholder"></div>
 <script src="components.js"></script>
 <script src="animations.js"></script>
+<script src="script.js"></script>
 <script>
   renderHeader('catering');
   renderFooter();
-
-  function submitCatering() {
-    const name = document.getElementById('fname').value;
-    const email = document.getElementById('email').value;
-    if (!name || !email) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-    document.getElementById('successMsg').style.display = 'block';
-    document.querySelector('#cateringForm button').disabled = true;
-    document.querySelector('#cateringForm button').textContent = 'Request Sent!';
-  }
 </script>
 </body>
 </html>

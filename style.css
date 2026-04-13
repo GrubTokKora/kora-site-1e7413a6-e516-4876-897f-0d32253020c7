@@ -1098,3 +1098,30 @@
     .order-platforms { gap: 1rem; }
     .platform-card { padding: 1rem 1.5rem; min-width: 120px; }
   }
+
+  /* ─── Kora public form status (script.js) ─── */
+  .form-status {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: none;
+  }
+  .form-status.is-visible { display: block; }
+  .form-status--neutral {
+    color: var(--text-mid);
+    background: var(--cream-dark);
+    border: 1px solid var(--border);
+  }
+  .form-status--error {
+    background: #ffebee;
+    border: 1px solid #ef9a9a;
+    color: #c62828;
+  }
+  .form-status--success {
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    color: #2e7d32;
+  }
+  .g-recaptcha { margin-top: 0.75rem; }
