@@ -895,7 +895,6 @@
     cursor: pointer;
     transition: transform 0.3s;
   }
-  .featured-item:hover { transform: translateY(-4px); }
   .featured-item img {
     width: 90px; height: 90px;
     border-radius: 50%;
@@ -937,37 +936,6 @@
     transition: transform 0.8s var(--transition);
   }
   .about-img-main:hover img { transform: scale(1.04); }
-  .about-img-badge {
-    position: absolute;
-    bottom: 2rem; right: -1.5rem;
-    background: var(--saffron);
-    color: white;
-    padding: 1.25rem;
-    border-radius: var(--radius-md);
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    min-width: 120px;
-  }
-  .badge-num {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
-  }
-  .badge-txt { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.9; }
-  
-  .about-img-secondary {
-    position: absolute;
-    bottom: -2rem; left: -2rem;
-    width: 45%;
-    aspect-ratio: 1;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    border: 4px solid var(--cream);
-    box-shadow: var(--shadow-md);
-  }
-  .about-img-secondary img { width: 100%; height: 100%; object-fit: cover; }
   
   .about-spice-decor {
     position: absolute;
@@ -1087,7 +1055,6 @@
   @media (max-width: 1024px) {
     .hero-img-frame { display: none; }
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .about-img-badge { right: 1rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
