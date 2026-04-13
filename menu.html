@@ -102,6 +102,43 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Sticky category bar (below fixed header) + horizontal scroll */
+    .menu-tab-sticky {
+      position: sticky;
+      top: var(--site-header-height, 104px);
+      z-index: 900;
+      margin-bottom: 1.75rem;
+      padding: 0.65rem 0 0.85rem;
+      margin-left: -0.25rem;
+      margin-right: -0.25rem;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .menu-tab-nav-scroll {
+      flex-wrap: nowrap !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      margin-bottom: 0 !important;
+      gap: 0.5rem;
+      padding-bottom: 0.3rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .menu-tab-nav-scroll::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    .menu-tab-nav-scroll .tab-btn {
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -122,13 +159,15 @@
   <section class="section">
     <div class="container">
 
-      <div class="tab-nav" id="menuTabNav">
-        <button class="tab-btn active" data-tab="all-veg">🌿 Veg</button>
-        <button class="tab-btn" data-tab="all-nonveg">🍗 Non Veg</button>
-        <button class="tab-btn" data-tab="all-bread">🫓 Tandoori Bread</button>
-        <button class="tab-btn" data-tab="all-dosa">🥞 Dosa</button>
-        <button class="tab-btn" data-tab="all-desserts">🍮 Desserts</button>
-        <button class="tab-btn" data-tab="all-beverages">🥤 Beverages</button>
+      <div class="menu-tab-sticky">
+        <div class="tab-nav menu-tab-nav-scroll" id="menuTabNav">
+          <button class="tab-btn active" data-tab="all-veg">🌿 Veg</button>
+          <button class="tab-btn" data-tab="all-nonveg">🍗 Non Veg</button>
+          <button class="tab-btn" data-tab="all-bread">🫓 Tandoori Bread</button>
+          <button class="tab-btn" data-tab="all-dosa">🥞 Dosa</button>
+          <button class="tab-btn" data-tab="all-desserts">🍮 Desserts</button>
+          <button class="tab-btn" data-tab="all-beverages">🥤 Beverages</button>
+        </div>
       </div>
 
       <!-- ── VEG ── -->
@@ -139,7 +178,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/17177806011073566634079372a3Bindi_masala.jpg"
               alt="Bhindi Masala" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Bhindi Masala</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -150,7 +188,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/171778080412956663414433b72chana_masala.jpg"
               alt="Channa Masala" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Channa Masala</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -161,7 +198,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1721913393101189187366a250318c509samosa.jpg"
               alt="Aloo Samosa" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Aloo Samosa</div>
             <div class="food-card-price">$5.99</div>
           </div>
@@ -172,7 +208,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191330692646857366a24fda686d8aloo-bajji.jpg"
               alt="Aloo Bajji" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Aloo Bajji</div>
             <div class="food-card-price">$6.99</div>
           </div>
@@ -183,7 +218,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1721914058188201486066a252ca72342chole-bature.jpg"
               alt="Chole Bhature" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Chole Bhature</div>
             <div class="food-card-price">$9.99</div>
           </div>
@@ -194,7 +228,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717781000121976663420864ecadal-makhni.jpg"
               alt="Dal Makhni" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Dal Makhni</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -205,7 +238,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717781263316346663430f8bb73dal-tadka.jpg"
               alt="Dal Tadka" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Dal Tadka</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -216,7 +248,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172210244997348297966a532b190a97gobi-manchu.jpg"
               alt="Gobi Manchurian" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Gobi Manchurian</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -227,7 +258,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1722102386155104409366a5327232e89gobi-65.jpg"
               alt="Gobi 65" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Gobi 65</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -238,7 +268,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172209932830829093566a526804d8f1jeera-rice.jpg"
               alt="Jeera Rice" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Jeera Rice</div>
             <div class="food-card-price">$8.99</div>
           </div>
@@ -249,7 +278,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/171778149419353666343f688b7fmalai-kofta.jpg"
               alt="Malai Kofta" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Malai Kofta</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -260,7 +288,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717783392876766634b60db919matar-paneer.jpg"
               alt="Mutter Paneer" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Mutter Paneer</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -271,7 +298,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172221902630337476066a6fa12767afpaneer bt (1).jpg"
               alt="Paneer Butter Masala" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Paneer Butter Masala</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -282,7 +308,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/17180239632671559066666f71ba517aPANER.jpg"
               alt="Paneer Tikka Kebab" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Paneer Tikka Kebab</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -293,7 +318,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717778015134426663365f1c46fChicken_Tikka_Masala.jpeg"
               alt="Paneer Tikka Masala" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Paneer Tikka Masala</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -304,7 +328,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/17177837592095466634ccf1b7ecpalak-paneer.jpg"
               alt="Palak Paneer" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Palak Paneer</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -315,7 +338,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172221596269802713866a6ee1a33b15v pulao.jpg"
               alt="Veg Pulao" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Veg Pulao</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -326,7 +348,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1722215423133723546666a6ebff5b5d3Veg biryani.jpg"
               alt="Veg Biryani" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Veg Biryani</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -337,7 +358,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191350661915700066a250a25d0fcchilli-corn.jpg"
               alt="Chilli Baby Corn" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Chilli Baby Corn</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -351,7 +371,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172209954554393591966a5275918c3bapollo-fish.jpg"
               alt="Apollo Fish" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Apollo Fish</div>
             <div class="food-card-price">$15.99</div>
           </div>
@@ -361,7 +380,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1722653468157632568266ad9b1c25fbchcd.jpg"
               alt="Chicken Dum Biryani" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Chicken Dum Biryani</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -371,7 +389,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191091610187361366a24684e9a09veg-pulao.png"
               alt="Chicken Pulao" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Chicken Pulao</div>
             <div class="food-card-price">$14.99</div>
           </div>
@@ -381,7 +398,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/17180240666699578466666f7820dc64FISHH.jpg"
               alt="Pomfret Tandoori Fish" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Pomfret Tandoori Fish</div>
             <div class="food-card-price">$17.99</div>
           </div>
@@ -391,7 +407,6 @@
               src="https://tawaindiancuisine.com/assets/img/normal/Chicken_Tikka_Masala.jpeg" alt="Chicken Tikka Masala"
               loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Chicken Tikka Masala</div>
             <div class="food-card-price">$14.99</div>
           </div>
@@ -400,7 +415,6 @@
           <div class="food-card-img"><img src="https://tawaindiancuisine.com/assets/img/normal/Chicken_Curry.jpeg"
               alt="Chicken Curry" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Chicken Curry</div>
             <div class="food-card-price">$13.99</div>
           </div>
@@ -409,7 +423,6 @@
           <div class="food-card-img"><img src="https://tawaindiancuisine.com/assets/img/normal/Chicken_Tikka.jpeg"
               alt="Chicken Tikka" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Chicken Tikka</div>
             <div class="food-card-price">$14.99</div>
           </div>
@@ -418,7 +431,6 @@
           <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/slideshow/tandoori.png"
               alt="Tandoori Chicken" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Tandoori Chicken</div>
             <div class="food-card-price">$15.99</div>
           </div>
@@ -432,7 +444,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/171791996512659007666560dd7b47epanner-kulcha.jpg"
               alt="Paneer Kulcha" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Paneer Kulcha</div>
             <div class="food-card-price">$3.99</div>
           </div>
@@ -442,7 +453,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/17179197897980081966665602d9d588parota.jpg"
               alt="Parota (2)" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Parota (2)</div>
             <div class="food-card-price">$1.99</div>
           </div>
@@ -452,7 +462,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/Plain naann.jpg" alt="Plain Naan"
               loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Plain Naan</div>
             <div class="food-card-price">$2.49</div>
           </div>
@@ -462,7 +471,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717918840111055863066655c780a506onion-kulcha.jpg"
               alt="Onion Kulcha" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Onion Kulcha</div>
             <div class="food-card-price">$3.99</div>
           </div>
@@ -476,7 +484,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1721910485190335808766a244d583ba0mysore.png"
               alt="Mysore Masala Dosa" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Mysore Masala Dosa</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -486,7 +493,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191020995348818166a243c1b65c1karampodi.png"
               alt="Karampodi Dosa" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Karampodi Dosa</div>
             <div class="food-card-price">$11.99</div>
           </div>
@@ -496,7 +502,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191029311960251966a2441542fb6rawa-masala.jpg"
               alt="Ghee Dosa" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Ghee Dosa</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -506,7 +511,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/17180176426392799326666de6a4f5d5UTHAPAM.jpg"
               alt="Uttapam" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Uttapam</div>
             <div class="food-card-price">$10.99</div>
           </div>
@@ -515,7 +519,6 @@
           <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/slideshow/dosa.png"
               alt="South Indian Dosa Special" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">South Indian Dosa Special</div>
             <div class="food-card-price">$12.99</div>
           </div>
@@ -529,7 +532,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717920740423382142666563e48b1adrasmalai.jpg"
               alt="Rasmalai" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Rasmalai</div>
             <div class="food-card-price">$4.99</div>
           </div>
@@ -539,7 +541,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/17179205031721636137666562f7c2663gajar-halwa.jpg"
               alt="Gajjar Ka Halwa" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Gajjar Ka Halwa (Carrot)</div>
             <div class="food-card-price">$5.99</div>
           </div>
@@ -549,7 +550,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717920442814082568666562ba5343fgulab-jamun.jpg"
               alt="Gulab Jamun" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Gulab Jamun</div>
             <div class="food-card-price">$3.99</div>
           </div>
@@ -563,7 +563,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1722205578135377309266a6c58a60d5bmango.jpg"
               alt="Mango Lassi" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Mango Lassi</div>
             <div class="food-card-price">$4.99</div>
           </div>
@@ -573,7 +572,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/172219236763578664466a691efd652fsugarcane1.jpg"
               alt="Sugarcane Juice" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Sugarcane Juice</div>
             <div class="food-card-price">$5.99</div>
           </div>
@@ -583,7 +581,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717924788831477225666573b41a020limka.jpg"
               alt="Limca" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Limca</div>
             <div class="food-card-price">$2.49</div>
           </div>
@@ -593,7 +590,6 @@
               src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717923777110363651666656fc1334b9coke.jpg"
               alt="Coke" loading="lazy"></div>
           <div class="food-card-body">
-            <div class="food-card-rating"><span class="star">★★★★</span></div>
             <div class="food-card-name">Coke</div>
             <div class="food-card-price">$1.99</div>
           </div>

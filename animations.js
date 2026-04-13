@@ -67,6 +67,43 @@ function initScrollReveal() {
             setTimeout(() => el.classList.add('visible'), 50);
           });
         }
+        // Menu page: align first card under fixed header + sticky tabs.
+        // Use instant scroll only: smooth scroll fires many scroll events, which toggles the compact
+        // header and changes its height mid-animation, so the first frame lands under the tabs.
+        if (tab.closest('.menu-tab-sticky') && target) {
+          const alignFirstCard = () => {
+            const firstCard = target.querySelector('.food-card');
+            const siteHeader = document.getElementById('siteHeader');
+            const sticky = document.querySelector('.menu-tab-sticky');
+            if (!firstCard || !siteHeader) return null;
+            void firstCard.offsetHeight;
+            const headerH = siteHeader.getBoundingClientRect().height;
+            const stickyH = sticky ? sticky.getBoundingClientRect().height : 0;
+            const gap = 16;
+            const y =
+              firstCard.getBoundingClientRect().top + window.scrollY - headerH - stickyH - gap;
+            return Math.max(0, y);
+          };
+
+          const run = () => {
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                const top = alignFirstCard();
+                if (top == null) return;
+                window.scrollTo({ top, left: 0, behavior: 'auto' });
+                // One extra instant pass: header height may update after scrollY changes.
+                requestAnimationFrame(() => {
+                  const top2 = alignFirstCard();
+                  if (top2 != null && Math.abs(top2 - window.scrollY) > 2) {
+                    window.scrollTo({ top: top2, left: 0, behavior: 'auto' });
+                  }
+                });
+              });
+            });
+          };
+
+          setTimeout(run, 180);
+        }
       });
     });
   }

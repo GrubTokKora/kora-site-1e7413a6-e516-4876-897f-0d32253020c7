@@ -428,9 +428,6 @@
      font-weight: 700;
      color: var(--saffron);
    }
-   .food-card-rating { display: flex; align-items: center; gap: 0.25rem; margin-bottom: 0.5rem; }
-   .star { color: var(--saffron-light); font-size: 0.8rem; }
-   .rating-text { font-size: 0.75rem; color: var(--text-light); }
    
    /* ─── Grid Layouts ───────────────────────── */
    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
