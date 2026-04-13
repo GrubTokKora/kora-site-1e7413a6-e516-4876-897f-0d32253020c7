@@ -8,6 +8,7 @@
 
    /* ─── CSS Variables ─────────────────────── */
    :root {
+     --site-header-height: 0px;
      --cream:        #FDF8F0;
      --cream-dark:   #F5EDD8;
      --cream-mid:    #EFE4CC;
@@ -57,7 +58,36 @@
    ul { list-style: none; }
    button { cursor: pointer; border: none; background: none; font-family: inherit; }
    
-   /* ─── Top Bar ────────────────────────────── */
+   /* ─── Site header: fixed to viewport top; spacer below holds layout height ─ */
+   .site-header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1000;
+     width: 100%;
+   }
+   .header-scroll-spacer {
+     width: 100%;
+     overflow: hidden;
+     pointer-events: none;
+   }
+
+   /* ─── Top Bar: whole strip slides up; navbar follows via synced margin (see --clip-h in JS) ─ */
+   .top-bar-clip {
+     overflow: hidden;
+     z-index: 2;
+     transform: translateY(0);
+     margin-bottom: 0;
+     transition:
+       transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+       margin-bottom 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+   .site-header--compact .top-bar-clip {
+     transform: translateY(-100%);
+     margin-bottom: calc(-1 * var(--clip-h, 0px));
+     pointer-events: none;
+   }
    .top-bar {
      background: var(--dark-brown);
      color: rgba(255,255,255,0.85);
@@ -65,7 +95,6 @@
      font-family: 'Jost', sans-serif;
      letter-spacing: 0.02em;
      position: relative;
-     z-index: 100;
    }
    .top-bar-inner {
      max-width: 1320px;
@@ -91,6 +120,17 @@
      transition: all 0.3s;
    }
    .social-icon:hover { background: var(--saffron); color: white; transform: translateY(-2px); }
+
+   @media (prefers-reduced-motion: reduce) {
+     .top-bar-clip,
+     .site-header--compact .top-bar-clip {
+       transition: none !important;
+     }
+     .site-header--compact .top-bar-clip {
+       transform: translateY(-100%);
+       margin-bottom: calc(-1 * var(--clip-h, 0px));
+     }
+   }
    
    /* ─── Navbar ─────────────────────────────── */
    .navbar {
@@ -98,14 +138,19 @@
      backdrop-filter: blur(12px);
      -webkit-backdrop-filter: blur(12px);
      border-bottom: 1px solid var(--border);
-     position: sticky;
-     top: 0;
-     z-index: 999;
-     transition: all 0.4s var(--transition);
+     position: relative;
+     z-index: 5;
+     transition:
+       background 0.45s var(--transition),
+       box-shadow 0.45s var(--transition),
+       border-color 0.3s ease;
    }
    .navbar.scrolled {
-     background: rgba(253, 248, 240, 0.98);
+     background: rgba(253, 248, 240, 0.99);
      box-shadow: var(--shadow-md);
+   }
+   .site-header--compact .navbar:not(.scrolled) {
+     box-shadow: 0 4px 20px rgba(44, 26, 14, 0.07);
    }
    .nav-container {
      max-width: 1320px;
@@ -685,8 +730,7 @@
 /* ─── Hero ────────────────────────────────── */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    min-height: max(600px, calc(100vh - var(--site-header-height)));
     overflow: hidden;
     background: var(--dark-brown);
   }
@@ -1058,7 +1102,7 @@
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .hero { height: 85vh; }
+    .hero { min-height: max(500px, calc(85vh - var(--site-header-height))); }
     .hero-content { margin-left: 2rem; }
     .hero-phone-badge { display: none; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }

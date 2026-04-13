@@ -24,7 +24,9 @@ function renderHeader(activePage = 'home') {
   `).join('');
 
   document.getElementById('header-placeholder').innerHTML = `
-    <!-- Top bar -->
+    <header class="site-header" id="siteHeader">
+    <!-- Top bar (clip + slide-up when compact) -->
+    <div class="top-bar-clip">
     <div class="top-bar">
       <div class="top-bar-inner">
         <div class="top-bar-left">
@@ -44,6 +46,7 @@ function renderHeader(activePage = 'home') {
           </a>
         </div>
       </div>
+    </div>
     </div>
     <!-- Main Navbar -->
     <nav class="navbar" id="mainNav">
@@ -69,6 +72,8 @@ function renderHeader(activePage = 'home') {
         </button>
       </div>
     </nav>
+    </header>
+    <div class="header-scroll-spacer" id="headerScrollSpacer" aria-hidden="true"></div>
   `;
 
   // Hamburger toggle
@@ -77,15 +82,79 @@ function renderHeader(activePage = 'home') {
     document.getElementById('hamburger').classList.toggle('active');
   });
 
-  // Sticky nav on scroll
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 80) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
+  initHeaderScroll();
+}
+
+function initHeaderScroll() {
+  const siteHeader = document.getElementById('siteHeader');
+  const nav = document.getElementById('mainNav');
+  const spacer = document.getElementById('headerScrollSpacer');
+  const topBar = siteHeader?.querySelector('.top-bar');
+  if (!siteHeader || !nav || !spacer) return;
+
+  const SCROLL_COMPACT = 40;
+  const SCROLL_NAV_SHADOW = 72;
+  const topBarClip = siteHeader.querySelector('.top-bar-clip');
+
+  function syncSpacerHeight() {
+    const h = siteHeader.offsetHeight;
+    spacer.style.height = `${h}px`;
+    document.documentElement.style.setProperty('--site-header-height', `${h}px`);
+  }
+
+  /** Pixel height of the top bar strip (for slide + negative margin so the nav moves together). */
+  function syncClipHeightVar() {
+    if (!topBarClip) return;
+    if (!siteHeader.classList.contains('site-header--compact')) {
+      topBarClip.style.setProperty('--clip-h', `${topBarClip.offsetHeight}px`);
     }
+  }
+
+  const apply = () => {
+    const y = window.scrollY;
+    const compact = y > SCROLL_COMPACT;
+    const wasCompact = siteHeader.classList.contains('site-header--compact');
+
+    if (topBarClip && compact && !wasCompact) {
+      topBarClip.style.setProperty('--clip-h', `${topBarClip.offsetHeight}px`);
+    }
+
+    siteHeader.classList.toggle('site-header--compact', compact);
+    if (topBar) topBar.setAttribute('aria-hidden', compact ? 'true' : 'false');
+    nav.classList.toggle('scrolled', y > SCROLL_NAV_SHADOW);
+
+    syncSpacerHeight();
+    syncClipHeightVar();
+  };
+
+  let ticking = false;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        apply();
+        ticking = false;
+      });
+    },
+    { passive: true }
+  );
+
+  window.addEventListener('resize', () => {
+    syncClipHeightVar();
+    syncSpacerHeight();
   });
+
+  if (typeof ResizeObserver !== 'undefined') {
+    const ro = new ResizeObserver(() => {
+      syncClipHeightVar();
+      syncSpacerHeight();
+    });
+    ro.observe(siteHeader);
+  }
+
+  apply();
 }
 
 function renderFooter() {
