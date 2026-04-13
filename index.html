@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tawa Indian Cuisine – Indian Restaurant</title>
+  <meta name="description" content="Experience authentic Indian cuisine at Tawa Indian Cuisine. Located at 38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tawa Indian Cuisine – Indian Restaurant">
+  <meta property="og:description" content="Experience authentic Indian cuisine at Tawa Indian Cuisine. Located at 38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://staging.kora-1e7413a6-e516-4876-897f-0d32253020c7.pages.dev/">
+  <!-- Hero image preload (if page has a hero/banner image) -->
+  <link rel="preload" as="image" href="https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Tawa Indian Cuisine",
+    "description": "Tawa Indian Cuisine brings the vibrant and diverse flavors of India to Farmington Hills. We are dedicated to providing an authentic dining experience with fresh ingredients and traditional recipes.",
+    "address": { "@type": "PostalAddress", "streetAddress": "38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA" },
+    "telephone": "+12485390900",
+    "openingHours": [],
+    "image": "https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero"
+  }
+  </script>
+  <!-- Tailwind + fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+      <div class="flex items-center">
+        <a href="index.html" class="text-2xl font-bold text-gray-800">Tawa Indian Cuisine</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+        <lucide-icon name="menu" class="block h-6 w-6"></lucide-icon>
+        <lucide-icon name="x" class="hidden h-6 w-6"></lucide-icon>
+      </button>
+      <ul id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-md py-2 md:static md:flex md:w-auto md:bg-transparent md:shadow-none md:py-0 md:space-x-6">
+        <li><a href="index.html" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">Home</a></li>
+        <li><a href="#about" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">About</a></li>
+        <li><a href="#menu" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">Menu</a></li>
+        <li><a href="#contact" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="relative h-96 w-full flex items-center justify-center text-center text-white">
+      <img src="https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero" alt="A spread of authentic Indian cuisine from Tawa" class="absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" width="1500" height="400">
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 p-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Authentic Indian Cuisine</h1>
+        <p class="text-lg md:text-xl mb-8">Experience the rich flavors of India.</p>
+        <a href="#menu" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">View Menu</a>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+          <img src="https://via.placeholder.com/600x400?text=Tawa+Indian+Cuisine+About" alt="Tawa Indian Cuisine Interior" loading="lazy" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">About Us</h2>
+          <p class="text-gray-600 leading-relaxed">Tawa Indian Cuisine brings the vibrant and diverse flavors of India to Farmington Hills. We are dedicated to providing an authentic dining experience with fresh ingredients and traditional recipes. Our goal is to offer a taste of India that delights your senses and leaves you with a memorable culinary journey.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Our Menu</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Appetizers</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Samosa</span>
+                <span class="text-gray-800 font-semibold">$5.99</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Pakora</span>
+                <span class="text-gray-800 font-semibold">$4.99</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Aloo Tikki</span>
+                <span class="text-gray-800 font-semibold">$5.49</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Main Courses</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Butter Chicken</span>
+                <span class="text-gray-800 font-semibold">$15.99</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Chicken Tikka Masala</span>
+                <span class="text-gray-800 font-semibold">$14.99</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Palak Paneer</span>
+                <span class="text-gray-800 font-semibold">$13.99</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Lamb Vindaloo</span>
+                <span class="text-gray-800 font-semibold">$16.99</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Desserts</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Gulab Jamun</span>
+                <span class="text-gray-800 font-semibold">$4.99</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-600">Kheer</span>
+                <span class="text-gray-800 font-semibold">$4.49</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Contact Us</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center">
+          <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0 md:pr-8">
+            <p class="text-gray-600 mb-4">Visit us or get in touch:</p>
+            <p class="text-gray-800 font-semibold mb-2">38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA</p>
+            <p class="text-gray-800 font-semibold mb-2">Phone: <a href="tel:+12485390900" class="text-blue-600 hover:underline">(248) 539-0900</a></p>
+            <p class="text-gray-800 font-semibold">Email: <a href="mailto:info@tawaindiancuisine.com" class="text-blue-600 hover:underline">info@tawaindiancuisine.com</a></p>
+          </div>
+          <div class="md:w-1/2">
+            <form id="contact-form" class="bg-white p-8 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Send us a message</h3>
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+              </div>
+              <div class="g-recaptcha" data-sitekey="6LcsdJYsAAAAAAur-h7cYlZuGJTmijNHmOi5kFH7"></div>
+              <div id="form-message" class="mt-4 text-center"></div>
+              <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 mt-4">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 Tawa Indian Cuisine. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" class="hover:text-amber-500"><lucide-icon name="facebook"></lucide-icon></a>
+        <a href="#" class="hover:text-amber-500"><lucide-icon name="twitter"></lucide-icon></a>
+        <a href="#" class="hover:text-amber-500"><lucide-icon name="instagram"></lucide-icon></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    window.KORA_SITE_CONFIG = {
+      apiBaseUrl: "https://kora-agent.grubtok.com",
+      businessId: "1e7413a6-e516-4876-897f-0d32253020c7",
+      recaptchaSiteKey: "6LcsdJYsAAAAAAur-h7cYlZuGJTmijNHmOi5kFH7"
+    };
+  </script>
+  <script src="script.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
