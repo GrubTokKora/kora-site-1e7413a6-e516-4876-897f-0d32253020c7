@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Tawa Indian Cuisine</title>
+  <meta name="description"
+    content="Contact Tawa Indian Cuisine for reservations, directions, catering requests, and general enquiries.">
+  <meta property="og:title" content="Contact Us — Tawa Indian Cuisine">
+  <meta property="og:description" content="Contact Tawa Indian Cuisine for reservations, directions, catering requests, and general enquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <link rel="canonical" href="https://tawaindiancuisine.com/contact.html">
+  <link rel="preload" as="image" href="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Tawa Indian Cuisine",
+    "description": "Tawa Indian Cuisine brings the vibrant and diverse flavors of India to Farmington Hills. We are dedicated to providing an authentic dining experience with fresh ingredients and traditional recipes.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "38245, 38249 W 10 Mile Rd",
+      "addressLocality": "Farmington Hills",
+      "addressRegion": "MI",
+      "postalCode": "48335",
+      "addressCountry": "US"
+    },
+    "telephone": "+12485362650",
+    "image": "https://tawaindiancuisine.com/assets/img/tawalog.jpeg",
+    "url": "https://tawaindiancuisine.com/contact.html"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-top-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-card h3 {
+      font-size: 1.35rem;
+      color: var(--dark-brown);
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-card p {
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-point {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-icon-circle {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--saffron);
+      color: white;
+      box-shadow: var(--shadow-sm);
+      margin-top: 0;
+    }
+
+    .contact-icon-circle svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .contact-point strong {
+      color: var(--dark-brown);
+    }
+
+    .contact-point p {
+      margin: 0;
+    }
+
+    .contact-form-card {
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .contact-form-title {
+      font-size: 2.2rem;
+      color: var(--dark-brown);
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .contact-socials {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-socials a {
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      background: #f5f5f5;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+
+    .contact-socials a svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .contact-socials a:hover {
+      color: var(--saffron);
+      border-color: var(--saffron);
+    }
+
+    .success-msg {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-sm);
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      color: #2e7d32;
+      font-weight: 500;
+    }
+
+    .contact-map-full {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-top: 0.5rem;
+    }
+
+    .map-frame {
+      width: 100%;
+      border: 0;
+      border-radius: 0;
+      min-height: 380px;
+      display: block;
+    }
+
+    @media(max-width:768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-top-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <h1>Contact Us</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Contact Us</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-top-grid">
+          <div class="contact-card reveal">
+            <h2 class="section-title" style="margin-bottom:0.9rem;">Contact Information</h2>
+            <p>Immerse yourself in a sophisticated and inviting ambiance. The carefully curated decor sets the stage for
+              intimate dinners and celebrations.</p>
+            <div class="contact-point">
+              <div class="contact-icon-circle" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg>
+              </div>
+              <p>38245,38249 W 10 Mile Rd, Farmington Hills, MI 48335</p>
+            </div>
+            <div class="contact-point">
+              <div class="contact-icon-circle" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                </svg>
+              </div>
+              <p><a href="mailto:tabladetroit@gmail.com">tabladetroit@gmail.com</a></p>
+            </div>
+            <div class="contact-point">
+              <div class="contact-icon-circle" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg>
+              </div>
+              <p><a href="tel:248-536-2650">248-536-2650</a></p>
+            </div>
+            <div class="contact-socials">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+              </a>
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M9.294 6.928 14.357 1h-1.2L8.761 6.147 5.247 1H1.2l5.31 7.78L1.2 15h1.2l4.642-5.438L10.753 15H14.8L9.293 6.928ZM7.65 8.853l-.538-.774L2.83 1.94h1.842l3.457 4.972.538.774 4.5 6.473h-1.842L7.65 8.853Z" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a5.507 5.507 0 0 0-1.99 1.296A5.507 5.507 0 0 0 .42 3.706c-.198.51-.332 1.09-.372 1.943C.01 6.502 0 6.775 0 8.946c0 2.171.01 2.444.048 3.297.04.853.174 1.434.372 1.943.258.667.64 1.234 1.296 1.89.656.656 1.223 1.038 1.89 1.296.51.198 1.09.332 1.943.372C5.556 15.99 5.829 16 8 16c2.171 0 2.444-.01 3.297-.048.853-.04 1.434-.174 1.943-.372a5.507 5.507 0 0 0 1.89-1.296 5.507 5.507 0 0 0 1.296-1.89c.198-.51.332-1.09.372-1.943.038-.853.048-1.126.048-3.297 0-2.171-.01-2.444-.048-3.297-.04-.853-.174-1.434-.372-1.943a5.507 5.507 0 0 0-1.296-1.89A5.507 5.507 0 0 0 13.24.42c-.51-.198-1.09-.332-1.943-.372C10.444.01 10.171 0 8 0Zm0 1.441c2.134 0 2.387.008 3.233.046.782.036 1.207.166 1.489.276.374.145.64.319.92.599.28.28.454.546.599.92.11.282.24.707.276 1.49.038.845.046 1.098.046 3.232 0 2.134-.008 2.387-.046 3.233-.036.782-.166 1.207-.276 1.489a4.068 4.068 0 0 1-.599.92 4.068 4.068 0 0 1-.92.599c-.282.11-.707.24-1.49.276-.845.038-1.098.046-3.232.046-2.134 0-2.387-.008-3.233-.046-.782-.036-1.207-.166-1.489-.276a4.068 4.068 0 0 1-.92-.599 4.068 4.068 0 0 1-.599-.92c-.11-.282-.24-.707-.276-1.49-.038-.845-.046-1.098-.046-3.232 0-2.134.008-2.387.046-3.233.036-.782.166-1.207.276-1.489.145-.374.319-.64.599-.92.28-.28.546-.454.92-.599.282-.11.707-.24 1.49-.276C5.613 1.45 5.866 1.441 8 1.441Zm0 2.458A4.101 4.101 0 1 0 8 12.1a4.101 4.101 0 0 0 0-8.202Zm0 6.761A2.66 2.66 0 1 1 8 5.34a2.66 2.66 0 0 1 0 5.32Zm5.224-7.286a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-card reveal">
+            <h3 class="contact-form-title">Get In Touch</h3>
+            <div id="contactForm">
+              <div class="contact-form-row">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder="Email Address">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="message"
+                  placeholder="Your opinion counts. We value every message."></textarea>
+              </div>
+              <button class="btn btn-primary" onclick="submitContactForm()"
+                style="width:100%; justify-content:center;">Send</button>
+              <div class="success-msg" id="contactSuccess">Thank you! Your message has been received. We will contact
+                you soon.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="contact-map-full reveal">
+    <iframe class="map-frame" title="Tawa Indian Cuisine Location" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=38245+W+10+Mile+Rd,+Farmington+Hills,+MI+48335&output=embed">
+    </iframe>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+  <script src="animations.js"></script>
+  <script>
+    renderHeader('contact');
+    renderFooter();
+
+    function submitContactForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      document.getElementById('contactSuccess').style.display = 'block';
+      const submitBtn = document.querySelector('#contactForm button');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Message Sent';
+    }
+  </script>
+</body>
+
+</html>

@@ -3,198 +3,572 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tawa Indian Cuisine – Indian Restaurant</title>
-  <meta name="description" content="Experience authentic Indian cuisine at Tawa Indian Cuisine. Located at 38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tawa Indian Cuisine – Indian Restaurant">
-  <meta property="og:description" content="Experience authentic Indian cuisine at Tawa Indian Cuisine. Located at 38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA.">
+  <title>Tawa Indian Cuisine — Authentic Indian Flavors in Farmington Hills, MI</title>
+  <meta name="description" content="Experience authentic Indian cuisine at Tawa Indian Cuisine, Farmington Hills, MI. Biryanis, Tandoori, South Indian Specials, Dosas & more.">
+  <meta property="og:title" content="Tawa Indian Cuisine — Authentic Indian Flavors in Farmington Hills, MI">
+  <meta property="og:description" content="Experience authentic Indian cuisine at Tawa Indian Cuisine, Farmington Hills, MI. Biryanis, Tandoori, South Indian Specials, Dosas & more.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero">
-  <!-- Favicon -->
+  <meta property="og:image" content="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
   <link rel="icon" href="favicon.ico">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.ico">
-  <!-- Canonical -->
-  <link rel="canonical" href="https://staging.kora-1e7413a6-e516-4876-897f-0d32253020c7.pages.dev/">
-  <!-- Hero image preload (if page has a hero/banner image) -->
-  <link rel="preload" as="image" href="https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero">
-  <!-- JSON-LD Structured Data -->
+  <link rel="canonical" href="https://tawaindiancuisine.com/">
+  <link rel="preload" as="image" href="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Tawa Indian Cuisine",
     "description": "Tawa Indian Cuisine brings the vibrant and diverse flavors of India to Farmington Hills. We are dedicated to providing an authentic dining experience with fresh ingredients and traditional recipes.",
-    "address": { "@type": "PostalAddress", "streetAddress": "38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA" },
-    "telephone": "+12485390900",
-    "openingHours": [],
-    "image": "https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero"
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "38245, 38249 W 10 Mile Rd",
+      "addressLocality": "Farmington Hills",
+      "addressRegion": "MI",
+      "postalCode": "48335",
+      "addressCountry": "US"
+    },
+    "telephone": "+12485362650",
+    "image": "https://tawaindiancuisine.com/assets/img/tawalog.jpeg",
+    "url": "https://tawaindiancuisine.com/",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "17:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"], "opens": "17:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:00", "closes": "24:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "15:00" }
+    ]
   }
   </script>
-  <!-- Tailwind + fonts -->
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Tailwind overrides to match our palette */
+    :root { --tw-color-primary: #D4892A; }
+  </style>
 </head>
 <body>
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center relative">
-      <div class="flex items-center">
-        <a href="index.html" class="text-2xl font-bold text-gray-800">Tawa Indian Cuisine</a>
-      </div>
-      <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
-        <lucide-icon name="menu" class="block h-6 w-6"></lucide-icon>
-        <lucide-icon name="x" class="hidden h-6 w-6"></lucide-icon>
-      </button>
-      <ul id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-md py-2 md:static md:flex md:w-auto md:bg-transparent md:shadow-none md:py-0 md:space-x-6">
-        <li><a href="index.html" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">Home</a></li>
-        <li><a href="#about" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">About</a></li>
-        <li><a href="#menu" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">Menu</a></li>
-        <li><a href="#contact" class="block py-2 px-4 text-gray-600 hover:text-amber-500 md:p-0">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="relative h-96 w-full flex items-center justify-center text-center text-white">
-      <img src="https://via.placeholder.com/1500x400?text=Tawa+Indian+Cuisine+Hero" alt="A spread of authentic Indian cuisine from Tawa" class="absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" width="1500" height="400">
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div class="relative z-10 p-4">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Authentic Indian Cuisine</h1>
-        <p class="text-lg md:text-xl mb-8">Experience the rich flavors of India.</p>
-        <a href="#menu" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">View Menu</a>
-      </div>
-    </section>
+<div id="header-placeholder"></div>
 
-    <section id="about" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
-          <img src="https://via.placeholder.com/600x400?text=Tawa+Indian+Cuisine+About" alt="Tawa Indian Cuisine Interior" loading="lazy" class="rounded-lg shadow-lg w-full h-auto">
-        </div>
-        <div class="md:w-1/2">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">About Us</h2>
-          <p class="text-gray-600 leading-relaxed">Tawa Indian Cuisine brings the vibrant and diverse flavors of India to Farmington Hills. We are dedicated to providing an authentic dining experience with fresh ingredients and traditional recipes. Our goal is to offer a taste of India that delights your senses and leaves you with a memorable culinary journey.</p>
+<!-- ══════════════════════════════════════════
+     HERO SLIDER
+══════════════════════════════════════════ -->
+<section class="hero" id="heroSection">
+  <div class="hero-slides" id="heroSlides">
+
+    <!-- Slide 1 -->
+    <div class="hero-slide active" style="--bg-img: url('https://tawaindiancuisine.com/admin/uploads/slideshow/hero_3_2.png')">
+      <div class="hero-bg hero-parallax"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label reveal">South Indian</span>
+        <h1 class="hero-title reveal">
+          <span class="hero-title-accent">Specials</span>
+          <br>Crafted with Love
+        </h1>
+        <p class="hero-desc reveal">Authentic flavors from the heart of India, served fresh daily in Farmington Hills.</p>
+        <div class="hero-actions reveal">
+          <a href="https://order.toasttab.com/online/tabla-38245-w-10-mile-rd?diningOption=takeout&rwg_token=AJKvS9XH-1E7e6IHM9ULqvAFi1CPc2z5CSVW5KKXBs9JovYGp-uL6OmmyFe4-Jib-EXMSx4NTZmR6baBYHzwuT6WM8vhbdTRqy84oMEuJjrDiqxVRpIRlhU%3D" target="_blank" class="btn btn-primary">Order Online</a>
+          <a href="menu.html" class="btn btn-white">View Menu</a>
         </div>
       </div>
-    </section>
-
-    <section id="menu" class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Our Menu</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg shadow-lg p-6">
-            <h3 class="text-2xl font-bold text-gray-800 mb-3">Appetizers</h3>
-            <ul class="space-y-2">
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Samosa</span>
-                <span class="text-gray-800 font-semibold">$5.99</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Pakora</span>
-                <span class="text-gray-800 font-semibold">$4.99</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Aloo Tikki</span>
-                <span class="text-gray-800 font-semibold">$5.49</span>
-              </li>
-            </ul>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg p-6">
-            <h3 class="text-2xl font-bold text-gray-800 mb-3">Main Courses</h3>
-            <ul class="space-y-2">
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Butter Chicken</span>
-                <span class="text-gray-800 font-semibold">$15.99</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Chicken Tikka Masala</span>
-                <span class="text-gray-800 font-semibold">$14.99</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Palak Paneer</span>
-                <span class="text-gray-800 font-semibold">$13.99</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Lamb Vindaloo</span>
-                <span class="text-gray-800 font-semibold">$16.99</span>
-              </li>
-            </ul>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg p-6">
-            <h3 class="text-2xl font-bold text-gray-800 mb-3">Desserts</h3>
-            <ul class="space-y-2">
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Gulab Jamun</span>
-                <span class="text-gray-800 font-semibold">$4.99</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span class="text-gray-600">Kheer</span>
-                <span class="text-gray-800 font-semibold">$4.49</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Contact Us</h2>
-        <div class="flex flex-col md:flex-row justify-center items-center">
-          <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0 md:pr-8">
-            <p class="text-gray-600 mb-4">Visit us or get in touch:</p>
-            <p class="text-gray-800 font-semibold mb-2">38245 W 10 Mile Rd, Farmington Hills, MI 48335, USA</p>
-            <p class="text-gray-800 font-semibold mb-2">Phone: <a href="tel:+12485390900" class="text-blue-600 hover:underline">(248) 539-0900</a></p>
-            <p class="text-gray-800 font-semibold">Email: <a href="mailto:info@tawaindiancuisine.com" class="text-blue-600 hover:underline">info@tawaindiancuisine.com</a></p>
-          </div>
-          <div class="md:w-1/2">
-            <form id="contact-form" class="bg-white p-8 rounded-lg shadow-lg">
-              <h3 class="text-2xl font-bold text-gray-800 mb-4">Send us a message</h3>
-              <div class="mb-4">
-                <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
-              </div>
-              <div class="mb-4">
-                <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
-              </div>
-              <div class="mb-4">
-                <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
-              </div>
-              <div class="g-recaptcha" data-sitekey="6LcsdJYsAAAAAAur-h7cYlZuGJTmijNHmOi5kFH7"></div>
-              <div id="form-message" class="mt-4 text-center"></div>
-              <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 mt-4">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2024 Tawa Indian Cuisine. All rights reserved.</p>
-      <div class="flex justify-center space-x-4 mt-4">
-        <a href="#" class="hover:text-amber-500"><lucide-icon name="facebook"></lucide-icon></a>
-        <a href="#" class="hover:text-amber-500"><lucide-icon name="twitter"></lucide-icon></a>
-        <a href="#" class="hover:text-amber-500"><lucide-icon name="instagram"></lucide-icon></a>
+      <div class="hero-img-frame reveal-right">
+        <img src="https://tawaindiancuisine.com/admin/uploads/slideshow/dosa.png" alt="South Indian Dosa" loading="eager">
+        <div class="hero-img-ring"></div>
       </div>
     </div>
-  </footer>
 
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script>
-    window.KORA_SITE_CONFIG = {
-      apiBaseUrl: "https://kora-agent.grubtok.com",
-      businessId: "1e7413a6-e516-4876-897f-0d32253020c7",
-      recaptchaSiteKey: "6LcsdJYsAAAAAAur-h7cYlZuGJTmijNHmOi5kFH7"
-    };
-  </script>
-  <script src="script.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-    });
-  </script>
+    <!-- Slide 2 -->
+    <div class="hero-slide" style="--bg-img: url('https://tawaindiancuisine.com/admin/uploads/slideshow/hero_3_2.png')">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label reveal">Aromatic</span>
+        <h1 class="hero-title reveal">
+          <span class="hero-title-accent">Biryanis</span>
+          <br>Like No Other
+        </h1>
+        <p class="hero-desc reveal">Slow-cooked aromatic rice dishes layered with spices and tender meat or vegetables.</p>
+        <div class="hero-actions reveal">
+          <a href="https://order.toasttab.com/online/tabla-38245-w-10-mile-rd?diningOption=takeout&rwg_token=AJKvS9XH-1E7e6IHM9ULqvAFi1CPc2z5CSVW5KKXBs9JovYGp-uL6OmmyFe4-Jib-EXMSx4NTZmR6baBYHzwuT6WM8vhbdTRqy84oMEuJjrDiqxVRpIRlhU%3D" target="_blank" class="btn btn-primary">Order Online</a>
+          <a href="menu.html" class="btn btn-white">View Menu</a>
+        </div>
+      </div>
+      <div class="hero-img-frame reveal-right">
+        <img src="https://tawaindiancuisine.com/admin/uploads/slideshow/hero_3_2.png" alt="Aromatic Biryani" loading="lazy">
+        <div class="hero-img-ring"></div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide" style="--bg-img: url('https://tawaindiancuisine.com/admin/uploads/slideshow/tandoori.png')">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label reveal">Hot &amp; Smoky</span>
+        <h1 class="hero-title reveal">
+          <span class="hero-title-accent">Tandoori</span>
+          <br>Fired to Perfection
+        </h1>
+        <p class="hero-desc reveal">Marinated in rich spices, charred in our traditional clay tandoor for that unforgettable flavour.</p>
+        <div class="hero-actions reveal">
+          <a href="https://order.toasttab.com/online/tabla-38245-w-10-mile-rd?diningOption=takeout&rwg_token=AJKvS9XH-1E7e6IHM9ULqvAFi1CPc2z5CSVW5KKXBs9JovYGp-uL6OmmyFe4-Jib-EXMSx4NTZmR6baBYHzwuT6WM8vhbdTRqy84oMEuJjrDiqxVRpIRlhU%3D" target="_blank" class="btn btn-primary">Order Online</a>
+          <a href="menu.html" class="btn btn-white">View Menu</a>
+        </div>
+      </div>
+      <div class="hero-img-frame reveal-right">
+        <img src="https://tawaindiancuisine.com/admin/uploads/slideshow/tandoori.png" alt="Tandoori Specialties" loading="lazy">
+        <div class="hero-img-ring"></div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="hero-slide" style="--bg-img: url('https://tawaindiancuisine.com/admin/uploads/slideshow/hero_5_5.png')">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label reveal">Refreshingly</span>
+        <h1 class="hero-title reveal">
+          <span class="hero-title-accent">Fresh</span>
+          <br>Sugarcane Juice
+        </h1>
+        <p class="hero-desc reveal">Cool down with our freshly pressed sugarcane juice — nature's perfect sweet refreshment.</p>
+        <div class="hero-actions reveal">
+          <a href="https://order.toasttab.com/online/tabla-38245-w-10-mile-rd?diningOption=takeout&rwg_token=AJKvS9XH-1E7e6IHM9ULqvAFi1CPc2z5CSVW5KKXBs9JovYGp-uL6OmmyFe4-Jib-EXMSx4NTZmR6baBYHzwuT6WM8vhbdTRqy84oMEuJjrDiqxVRpIRlhU%3D" target="_blank" class="btn btn-primary">Order Online</a>
+          <a href="menu.html" class="btn btn-white">View Menu</a>
+        </div>
+      </div>
+      <div class="hero-img-frame reveal-right">
+        <img src="https://tawaindiancuisine.com/admin/uploads/slideshow/hero_5_5.png" alt="Fresh Sugarcane Juice" loading="lazy">
+        <div class="hero-img-ring"></div>
+      </div>
+    </div>
+
+  </div><!-- /hero-slides -->
+
+  <!-- Slider controls -->
+  <div class="hero-controls">
+    <button class="hero-prev" id="heroPrev" aria-label="Previous slide">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+    </button>
+    <div class="hero-dots" id="heroDots"></div>
+    <button class="hero-next" id="heroNext" aria-label="Next slide">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+    </button>
+  </div>
+
+  <!-- Floating phone CTA -->
+  <div class="hero-phone-badge">
+    <div class="hero-phone-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+    </div>
+    <div>
+      <div class="hero-phone-label">Reservation</div>
+      <a href="tel:248-536-2650" class="hero-phone-num">248-536-2650</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     FEATURED DISHES STRIP
+══════════════════════════════════════════ -->
+<section class="featured-strip">
+  <div class="container">
+    <div class="featured-scroll">
+      <div class="featured-item reveal">
+        <img src="https://tawaindiancuisine.com/assets/img/normal/Chicken_Tikka_Masala.jpeg" alt="Chicken Masala">
+        <span>Chicken Masala</span>
+      </div>
+      <div class="featured-item reveal" style="transition-delay:0.1s">
+        <img src="https://tawaindiancuisine.com/assets/img/normal/Chicken_Curry.jpeg" alt="Chicken Curry">
+        <span>Chicken Curry</span>
+      </div>
+      <div class="featured-item reveal" style="transition-delay:0.2s">
+        <img src="https://tawaindiancuisine.com/assets/img/normal/Vegetable_Samosas.jpeg" alt="Vegetable Samosas">
+        <span>Vegetable Samosas</span>
+      </div>
+      <div class="featured-item reveal" style="transition-delay:0.3s">
+        <img src="https://tawaindiancuisine.com/assets/img/normal/Chicken_Tikka.jpeg" alt="Chicken Tikka">
+        <span>Chicken Tikka</span>
+      </div>
+      <div class="featured-item reveal" style="transition-delay:0.4s">
+        <img src="https://tawaindiancuisine.com/assets/img/normal/palak-paneer.jpg" alt="Palak Paneer">
+        <span>Palak Paneer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ABOUT / STORY SECTION
+══════════════════════════════════════════ -->
+<section class="section about-section">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Images Column -->
+      <div class="about-images reveal-left">
+        <div class="about-img-main">
+          <img src="https://tawaindiancuisine.com/admin/uploads/about_imgs/aboutaboutabouthomeabout_5_1.jpg" alt="Tawa Indian Cuisine Interior">
+          <div class="about-img-badge">
+            <span class="badge-num" data-count="10">0</span>
+            <span class="badge-txt">Years of<br>Excellence</span>
+          </div>
+        </div>
+        <div class="about-img-secondary">
+          <img src="https://tawaindiancuisine.com/assets/img/normal/about_4_2.png" alt="Chef at work">
+        </div>
+        <div class="about-spice-decor">🌶️</div>
+      </div>
+      <!-- Text Column -->
+      <div class="about-text reveal-right">
+        <div class="section-label"><span class="label-line"></span> Our Story</div>
+        <h2 class="section-title">Tawa Indian Cuisine</h2>
+        <p class="about-lead">If you are craving authentic, exquisite Indian cuisine, look no further than Tawa Indian Cuisine.</p>
+        <p style="color:var(--text-light); margin-bottom:1rem;">Our talented chefs prepare each dish with the finest ingredients, ensuring a symphony of flavors in every bite. From our spicy curries and aromatic biryanis to our delectable tandoori specialties, our menu offers something to delight every palate. For our vegetarian guests, we proudly present an array of flavorful, satisfying, and delightful options.</p>
+        <p style="color:var(--text-light); margin-bottom:2rem;">But it's not just the food that makes us special. Our warm, inviting atmosphere is designed to make you feel at home, whether dining with friends and family or enjoying a cozy takeout meal. Don't miss our popular desserts, like gulab jamun and rasmalai, perfect for indulging your sweet cravings.</p>
+
+        <div class="about-features stagger">
+          <div class="about-feature reveal">
+            <div class="feature-icon">🍛</div>
+            <div>
+              <h4>Authentic Recipes</h4>
+              <p>Traditional spices & family recipes passed through generations.</p>
+            </div>
+          </div>
+          <div class="about-feature reveal">
+            <div class="feature-icon">🌿</div>
+            <div>
+              <h4>Fresh Ingredients</h4>
+              <p>Locally sourced, premium ingredients in every single dish.</p>
+            </div>
+          </div>
+          <div class="about-feature reveal">
+            <div class="feature-icon">🥗</div>
+            <div>
+              <h4>Vegetarian Friendly</h4>
+              <p>An extensive vegetarian menu that delights every palate.</p>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-primary" style="margin-top:2rem;">Learn More About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STATS BAR
+══════════════════════════════════════════ -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid stagger">
+      <div class="stat-item reveal">
+        <div class="stat-num"><span data-count="10">0</span>+</div>
+        <div class="stat-label">Years of Service</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num"><span data-count="80">0</span>+</div>
+        <div class="stat-label">Menu Items</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num"><span data-count="5000">0</span>+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num"><span data-count="4">0</span></div>
+        <div class="stat-label">Service Options</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     OUR MENU SECTION (Home Preview)
+══════════════════════════════════════════ -->
+<section class="section menu-preview">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:3rem;">
+      <div class="section-label" style="justify-content:center"><span class="label-line"></span> Our Menu <span class="label-line"></span></div>
+      <h2 class="section-title">A Taste of India</h2>
+      <p class="section-subtitle" style="margin:0 auto;">From aromatic biryanis to crispy dosas — explore the rich tapestry of Indian cuisine.</p>
+    </div>
+
+    <div class="tab-nav" id="menuTabNav" style="justify-content:center;">
+      <button class="tab-btn active" data-tab="tab-veg">Veg</button>
+      <button class="tab-btn" data-tab="tab-nonveg">Non Veg</button>
+      <button class="tab-btn" data-tab="tab-bread">Tandoori Bread</button>
+      <button class="tab-btn" data-tab="tab-dosa">Dosa</button>
+      <button class="tab-btn" data-tab="tab-desserts">Desserts</button>
+      <button class="tab-btn" data-tab="tab-beverages">Beverages</button>
+    </div>
+
+    <!-- VEG -->
+    <div class="tab-pane grid-4 stagger" id="tab-veg" style="display:grid">
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172221902630337476066a6fa12767afpaneer bt (1).jpg" alt="Paneer Butter Masala" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Paneer Butter Masala</div>
+          <div class="food-card-price">$13.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172221596269802713866a6ee1a33b15v pulao.jpg" alt="Veg Pulao" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Veg Pulao</div>
+          <div class="food-card-price">$13.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1722215423133723546666a6ebff5b5d3Veg biryani.jpg" alt="Veg Biryani" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Veg Biryani</div>
+          <div class="food-card-price">$13.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172210244997348297966a532b190a97gobi-manchu.jpg" alt="Gobi Manchurian" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Gobi Manchurian</div>
+          <div class="food-card-price">$12.99</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NON VEG -->
+    <div class="tab-pane grid-4 stagger" id="tab-nonveg" style="display:none">
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172209954554393591966a5275918c3bapollo-fish.jpg" alt="Apollo Fish" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Apollo Fish</div>
+          <div class="food-card-price">$15.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1722653468157632568266ad9b1c25fbchcd.jpg" alt="Chicken Dum Biryani" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Chicken Dum Biryani</div>
+          <div class="food-card-price">$13.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191091610187361366a24684e9a09veg-pulao.png" alt="Chicken Pulao" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Chicken Pulao</div>
+          <div class="food-card-price">$14.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/17180240666699578466666f7820dc64FISHH.jpg" alt="Pomfret Tandoori Fish" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Pomfret Tandoori Fish</div>
+          <div class="food-card-price">$17.99</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TANDOORI BREAD -->
+    <div class="tab-pane grid-4 stagger" id="tab-bread" style="display:none">
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/171791996512659007666560dd7b47epanner-kulcha.jpg" alt="Paneer Kulcha" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Paneer Kulcha</div>
+          <div class="food-card-price">$3.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/17179197897980081966665602d9d588parota.jpg" alt="Parota" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Parota (2)</div>
+          <div class="food-card-price">$1.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/Plain naann.jpg" alt="Plain Naan" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Plain Naan</div>
+          <div class="food-card-price">$2.49</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717918840111055863066655c780a506onion-kulcha.jpg" alt="Onion Kulcha" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Onion Kulcha</div>
+          <div class="food-card-price">$3.99</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOSA -->
+    <div class="tab-pane grid-4 stagger" id="tab-dosa" style="display:none">
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1721910485190335808766a244d583ba0mysore.png" alt="Mysore Masala Dosa" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Mysore Masala Dosa</div>
+          <div class="food-card-price">$12.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191020995348818166a243c1b65c1karampodi.png" alt="Karampodi Dosa" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Karampodi Dosa</div>
+          <div class="food-card-price">$11.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172191029311960251966a2441542fb6rawa-masala.jpg" alt="Ghee Dosa" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Ghee Dosa</div>
+          <div class="food-card-price">$12.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/17180176426392799326666de6a4f5d5UTHAPAM.jpg" alt="Uttapam" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Uttapam</div>
+          <div class="food-card-price">$10.99</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="tab-pane grid-4 stagger" id="tab-desserts" style="display:none">
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717920740423382142666563e48b1adrasmalai.jpg" alt="Rasmalai" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Rasmalai</div>
+          <div class="food-card-price">$4.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/17179205031721636137666562f7c2663gajar-halwa.jpg" alt="Gajar Ka Halwa" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Gajjar Ka Halwa (Carrot)</div>
+          <div class="food-card-price">$5.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717920442814082568666562ba5343fgulab-jamun.jpg" alt="Gulab Jamun" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Gulab Jamun</div>
+          <div class="food-card-price">$3.99</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEVERAGES -->
+    <div class="tab-pane grid-4 stagger" id="tab-beverages" style="display:none">
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1722205578135377309266a6c58a60d5bmango.jpg" alt="Mango Lassi" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Mango Lassi</div>
+          <div class="food-card-price">$4.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/172219236763578664466a691efd652fsugarcane1.jpg" alt="Sugarcane Juice" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Sugarcane Juice</div>
+          <div class="food-card-price">$5.99</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717924788831477225666573b41a020limka.jpg" alt="Limca" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Limca</div>
+          <div class="food-card-price">$2.49</div>
+        </div>
+      </div>
+      <div class="food-card reveal">
+        <div class="food-card-img"><img src="https://tawaindiancuisine.com/admin/uploads/featured-image/1717923777110363651666656fc1334b9coke.jpg" alt="Coke" loading="lazy"></div>
+        <div class="food-card-body">
+          <div class="food-card-rating"><span class="star">★★★★</span><span class="rating-text">(1 rating)</span></div>
+          <div class="food-card-name">Coke</div>
+          <div class="food-card-price">$1.99</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="https://tawaindiancuisine.com/menu.pdf" target="_blank" class="btn btn-outline">View Full Menu PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ORDER ONLINE BANNER
+══════════════════════════════════════════ -->
+<section class="order-online-section">
+  <div class="container">
+    <div class="section-label" style="justify-content:center; margin-bottom:1.5rem;"><span class="label-line"></span>Order Anytime<span class="label-line"></span></div>
+    <h2 class="section-title" style="text-align:center; color:white; margin-bottom:0.5rem;">Get Tawa Delivered to You</h2>
+    <p style="text-align:center; color:rgba(255,255,255,0.75); margin-bottom:2.5rem;">Order from your favourite platform. Fast, fresh & delicious.</p>
+    <div class="order-platforms stagger">
+      <a href="https://www.doordash.com/store/tabla-llc-farmington-hills-29708756/?utm_campaign=gpa" target="_blank" rel="noopener" class="platform-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/dd.png" alt="DoorDash">
+        <span>DoorDash</span>
+      </a>
+      <a href="https://www.ubereats.com/store/tabla-indian-cuisine/idH05N0DTfKN-yvEp8jOig?utm_campaign=place-action-link&utm_medium=organic&utm_source=google" target="_blank" rel="noopener" class="platform-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/uber.png" alt="UberEats">
+        <span>UberEats</span>
+      </a>
+      <a href="https://order.toasttab.com/online/tabla-38245-w-10-mile-rd?diningOption=takeout&rwg_token=AJKvS9XH-1E7e6IHM9ULqvAFi1CPc2z5CSVW5KKXBs9JovYGp-uL6OmmyFe4-Jib-EXMSx4NTZmR6baBYHzwuT6WM8vhbdTRqy84oMEuJjrDiqxVRpIRlhU%3D" target="_blank" rel="noopener" class="platform-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/toast.png" alt="Toast">
+        <span>Toast</span>
+      </a>
+      <a href="http://menus.fyi/8977496" target="_blank" rel="noopener" class="platform-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/grubhubimg.png" alt="Grubhub">
+        <span>Grubhub</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     RESERVATION BANNER
+══════════════════════════════════════════ -->
+<div class="reservation-banner">
+  <div class="container">
+    <h2 class="reveal">Reserve Your Table Today</h2>
+    <p class="reveal">Call us for reservations and group dining enquiries.</p>
+    <a href="tel:248-536-2650" class="btn btn-white reveal">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+      248-536-2650
+    </a>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="animations.js"></script>
+<script>
+  renderHeader('home');
+  renderFooter();
+</script>
 </body>
 </html>

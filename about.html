@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Tawa Indian Cuisine</title>
+  <meta name="description" content="Learn the story behind Tawa Indian Cuisine — authentic Indian food in Farmington Hills, MI.">
+  <meta property="og:title" content="About Us — Tawa Indian Cuisine">
+  <meta property="og:description" content="Learn the story behind Tawa Indian Cuisine — authentic Indian food in Farmington Hills, MI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <link rel="canonical" href="https://tawaindiancuisine.com/about.html">
+  <link rel="preload" as="image" href="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Tawa Indian Cuisine",
+    "description": "Tawa Indian Cuisine brings the vibrant and diverse flavors of India to Farmington Hills. We are dedicated to providing an authentic dining experience with fresh ingredients and traditional recipes.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "38245, 38249 W 10 Mile Rd",
+      "addressLocality": "Farmington Hills",
+      "addressRegion": "MI",
+      "postalCode": "48335",
+      "addressCountry": "US"
+    },
+    "telephone": "+12485362650",
+    "image": "https://tawaindiancuisine.com/assets/img/tawalog.jpeg",
+    "url": "https://tawaindiancuisine.com/about.html"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .about-hero-img { width:100%; max-height:500px; object-fit:cover; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2rem; }
+    .value-card {
+      background:white;
+      border:1px solid var(--border);
+      border-radius:var(--radius-md);
+      padding:2rem;
+      text-align:center;
+      transition:all 0.4s var(--transition);
+    }
+    .value-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:var(--saffron); }
+    .value-icon { font-size:2.5rem; margin-bottom:1rem; display:block; }
+    .value-card h3 { font-size:1.2rem; color:var(--dark-brown); margin-bottom:0.5rem; }
+    .value-card p { font-size:0.9rem; color:var(--text-light); line-height:1.7; }
+    .team-section { background:var(--cream-dark); }
+    .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+    .why-point { display:flex; gap:1rem; margin-bottom:1.5rem; align-items:flex-start; }
+    .why-num {
+      width:40px; height:40px; flex-shrink:0;
+      background:var(--saffron); color:white;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:700;
+    }
+    .why-point h4 { font-family:'Jost',sans-serif; font-size:1rem; font-weight:700; color:var(--dark-brown); margin-bottom:0.25rem; }
+    .why-point p { font-size:0.9rem; color:var(--text-light); }
+    @media(max-width:768px){
+      .values-grid{grid-template-columns:1fr;}
+      .why-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <h1>About Us</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>About Us</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Story Section ── -->
+<section class="section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="reveal-left">
+        <img src="https://tawaindiancuisine.com/admin/uploads/about_imgs/aboutaboutabouthomeabout_5_1.jpg" alt="Tawa Indian Cuisine" class="about-hero-img">
+      </div>
+      <div class="reveal-right">
+        <div class="section-label"><span class="label-line"></span> Our Story</div>
+        <h2 class="section-title">Tawa Indian Cuisine</h2>
+        <p style="color:var(--text-light); margin-bottom:1rem;">If you are craving authentic, exquisite Indian cuisine, look no further than Tawa Indian Cuisine. Our talented chefs prepare each dish with the finest ingredients, ensuring a symphony of flavors in every bite. From our spicy curries and aromatic biryanis to our delectable tandoori specialties, our menu offers something to delight every palate.</p>
+        <p style="color:var(--text-light); margin-bottom:1rem;">For our vegetarian guests, we proudly present an array of flavorful, satisfying, and delightful options.</p>
+        <p style="color:var(--text-light); margin-bottom:2rem;">But it's not just the food that makes us special. Our warm, inviting atmosphere is designed to make you feel at home, whether dining with friends and family or enjoying a cozy takeout meal. Don't miss our popular desserts, like gulab jamun and rasmalai, perfect for indulging your sweet cravings.</p>
+        <p style="color:var(--text-light); margin-bottom:2rem;">Join us today and experience the pinnacle of Indian dining. We'd love to see your moments with us—share your photos and tag us on social media. We look forward to welcoming you!</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Values ── -->
+<section class="section" style="background:var(--cream-dark);">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1rem;">
+      <div class="section-label" style="justify-content:center;"><span class="label-line"></span> What We Stand For <span class="label-line"></span></div>
+      <h2 class="section-title">Our Core Values</h2>
+    </div>
+    <div class="values-grid stagger">
+      <div class="value-card reveal">
+        <span class="value-icon">🍛</span>
+        <h3>Authentic Flavors</h3>
+        <p>Every recipe is rooted in traditional Indian culinary methods, passed down through generations and refined by our talented chefs.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-icon">🌿</span>
+        <h3>Fresh Ingredients</h3>
+        <p>We source the finest, freshest ingredients to ensure every dish sings with natural flavor and wholesome goodness.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-icon">🏡</span>
+        <h3>Warm Hospitality</h3>
+        <p>Our warm, inviting atmosphere is designed to make you feel at home — whether dining in or enjoying takeout.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-icon">🥗</span>
+        <h3>Vegetarian Variety</h3>
+        <p>We're proud to offer an extensive and genuinely delicious vegetarian menu, ensuring every guest is delighted.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-icon">🎉</span>
+        <h3>Catering Excellence</h3>
+        <p>From intimate gatherings to grand banquets — we bring the authentic Tawa experience to your special events.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-icon">🚚</span>
+        <h3>Convenient Delivery</h3>
+        <p>Order through UberEats, DoorDash, Grubhub, or Toast and enjoy Tawa's flavors from the comfort of your home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Why Choose Us ── -->
+<section class="section" style="background:white;">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="section-label"><span class="label-line"></span> Why Tawa</div>
+        <h2 class="section-title">The Tawa Difference</h2>
+        <div class="why-point reveal">
+          <div class="why-num">1</div>
+          <div>
+            <h4>Handcrafted with Passion</h4>
+            <p>Each dish is individually prepared by our master chefs — never mass-produced or rushed.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num">2</div>
+          <div>
+            <h4>Regional Specialties</h4>
+            <p>We celebrate the full breadth of Indian cuisine, from South Indian dosas and biryanis to North Indian curries and tandoori.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num">3</div>
+          <div>
+            <h4>Spice Levels Tailored to You</h4>
+            <p>We adapt our spice levels to your preference, ensuring every guest enjoys their meal perfectly.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num">4</div>
+          <div>
+            <h4>Convenient Location</h4>
+            <p>Situated on W 10 Mile Rd, Farmington Hills — easily accessible with ample parking.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <img src="https://tawaindiancuisine.com/assets/img/normal/about_4_2.png" alt="Our Kitchen" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); object-fit:cover; aspect-ratio:4/3;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="reservation-banner">
+  <div class="container">
+    <h2 class="reveal">Come Dine With Us</h2>
+    <p class="reveal">Experience the pinnacle of Indian dining in Farmington Hills.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="reveal">
+      <a href="tel:248-536-2650" class="btn btn-white">📞 248-536-2650</a>
+      <a href="contact.html" class="btn btn-outline" style="border-color:white; color:white;">Get Directions</a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+<script src="animations.js"></script>
+<script>renderHeader('about'); renderFooter();</script>
+</body>
+</html>

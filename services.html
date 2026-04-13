@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services — Tawa Indian Cuisine</title>
+  <meta name="description" content="Tawa Indian Cuisine offers Dine-In, Catering, Outdoor Catering, and Banquet services in Farmington Hills, MI.">
+  <meta property="og:title" content="Our Services — Tawa Indian Cuisine">
+  <meta property="og:description" content="Tawa Indian Cuisine offers Dine-In, Catering, Outdoor Catering, and Banquet services in Farmington Hills, MI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <link rel="canonical" href="https://tawaindiancuisine.com/services.html">
+  <link rel="preload" as="image" href="https://tawaindiancuisine.com/assets/img/tawalog.jpeg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Tawa Indian Cuisine",
+    "description": "Tawa Indian Cuisine brings the vibrant and diverse flavors of India to Farmington Hills. We are dedicated to providing an authentic dining experience with fresh ingredients and traditional recipes.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "38245, 38249 W 10 Mile Rd",
+      "addressLocality": "Farmington Hills",
+      "addressRegion": "MI",
+      "postalCode": "48335",
+      "addressCountry": "US"
+    },
+    "telephone": "+12485362650",
+    "image": "https://tawaindiancuisine.com/assets/img/tawalog.jpeg",
+    "url": "https://tawaindiancuisine.com/services.html"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; }
+    .service-card {
+      position:relative; overflow:hidden;
+      border-radius:var(--radius-lg);
+      aspect-ratio:4/3;
+      cursor:pointer;
+      box-shadow:var(--shadow-md);
+    }
+    .service-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s var(--transition); }
+    .service-card:hover img { transform:scale(1.08); }
+    .service-card-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top, rgba(28,14,6,0.85) 0%, rgba(28,14,6,0.2) 60%, transparent 100%);
+      display:flex; flex-direction:column; justify-content:flex-end;
+      padding:2rem;
+      transition:all 0.4s;
+    }
+    .service-card:hover .service-card-overlay { background:linear-gradient(to top, rgba(28,14,6,0.92) 0%, rgba(28,14,6,0.4) 70%, transparent 100%); }
+    .service-card-icon { font-size:2.5rem; margin-bottom:0.75rem; }
+    .service-card-title { font-family:'Cormorant Garamond',serif; font-size:1.75rem; color:white; font-weight:600; margin-bottom:0.5rem; }
+    .service-card-desc { font-size:0.875rem; color:rgba(255,255,255,0.7); line-height:1.6; max-height:0; overflow:hidden; transition:max-height 0.4s; }
+    .service-card:hover .service-card-desc { max-height:100px; }
+    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; text-align:center; margin-top:2rem; }
+    .process-step { padding:2rem 1rem; }
+    .process-num { font-family:'Cormorant Garamond',serif; font-size:3.5rem; font-weight:700; color:var(--saffron); opacity:0.4; line-height:1; }
+    .process-step h3 { font-size:1.1rem; color:var(--dark-brown); margin-bottom:0.5rem; }
+    .process-step p { font-size:0.875rem; color:var(--text-light); }
+    @media(max-width:768px){
+      .services-grid{grid-template-columns:1fr;}
+      .process-grid{grid-template-columns:repeat(2,1fr);}
+    }
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <h1>Our Services</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Our Services</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:3rem;">
+      <div class="section-label" style="justify-content:center;"><span class="label-line"></span> What We Offer <span class="label-line"></span></div>
+      <h2 class="section-title">Serving Every Occasion</h2>
+      <p class="section-subtitle" style="margin:0 auto;">From intimate dine-in experiences to grand outdoor banquets — Tawa brings authentic Indian flavors to every moment.</p>
+    </div>
+
+    <div class="services-grid stagger">
+      <div class="service-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/1.jpg" alt="Dine In">
+        <div class="service-card-overlay">
+          <div class="service-card-icon">🍽️</div>
+          <div class="service-card-title">Dine In</div>
+          <div class="service-card-desc">Enjoy a warm, inviting ambiance paired with the rich aromas and bold flavors of authentic Indian cuisine. Perfect for families, couples, and group outings.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/2.jpg" alt="Catering">
+        <div class="service-card-overlay">
+          <div class="service-card-icon">🥘</div>
+          <div class="service-card-title">Catering</div>
+          <div class="service-card-desc">Bring the Tawa experience to your events. Our catering service delivers freshly prepared authentic Indian dishes right to your venue.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/3.jpg" alt="Outdoor Catering">
+        <div class="service-card-overlay">
+          <div class="service-card-icon">🌿</div>
+          <div class="service-card-title">Outdoor Catering</div>
+          <div class="service-card-desc">Celebrating outdoors? Our outdoor catering setup ensures your guests enjoy hot, delicious Indian food wherever your event takes place.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img src="https://tawaindiancuisine.com/assets/4.jpg" alt="Banquet">
+        <div class="service-card-overlay">
+          <div class="service-card-icon">🎉</div>
+          <div class="service-card-title">Banquet</div>
+          <div class="service-card-desc">Host weddings, corporate events, and milestone celebrations with our full banquet service — elegant, memorable, and delicious.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section" style="background:var(--cream-dark);">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1rem;">
+      <div class="section-label" style="justify-content:center;"><span class="label-line"></span> Our Process <span class="label-line"></span></div>
+      <h2 class="section-title">How It Works</h2>
+    </div>
+    <div class="process-grid stagger">
+      <div class="process-step reveal">
+        <div class="process-num">01</div>
+        <h3>Get in Touch</h3>
+        <p>Call us or fill out our catering enquiry form with your event details.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">02</div>
+        <h3>Choose Your Menu</h3>
+        <p>Work with our team to select the perfect dishes and quantities for your event.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">03</div>
+        <h3>We Prepare</h3>
+        <p>Our chefs hand-craft every dish fresh on the day using premium ingredients.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">04</div>
+        <h3>Enjoy &amp; Celebrate</h3>
+        <p>Relax and enjoy while your guests savour the authentic flavors of Tawa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="reservation-banner">
+  <div class="container">
+    <h2 class="reveal">Plan Your Event With Us</h2>
+    <p class="reveal">Contact us today to discuss your catering or banquet needs.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="reveal">
+      <a href="catering.html" class="btn btn-white">Request Catering</a>
+      <a href="contact.html" class="btn btn-outline" style="border-color:white;color:white;">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+<script src="animations.js"></script>
+<script>renderHeader('services'); renderFooter();</script>
+</body>
+</html>
