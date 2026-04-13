@@ -4,13 +4,12 @@ const UBEREATS_URL = "https://www.ubereats.com/store/tabla-indian-cuisine/idH05N
 const TOAST_URL = "https://order.toasttab.com/online/tabla-38245-w-10-mile-rd?diningOption=takeout&rwg_token=AJKvS9XH-1E7e6IHM9ULqvAFi1CPc2z5CSVW5KKXBs9JovYGp-uL6OmmyFe4-Jib-EXMSx4NTZmR6baBYHzwuT6WM8vhbdTRqy84oMEuJjrDiqxVRpIRlhU%3D";
 const DOORDASH_URL = "https://www.doordash.com/store/tabla-llc-farmington-hills-29708756/?utm_campaign=gpa";
 const GRUBHUB_URL = "http://menus.fyi/8977496";
-const MENU_PDF_URL = "https://tawaindiancuisine.com/menu.pdf";
 
 function renderHeader(activePage = 'home') {
   const pages = [
     { id: 'home', label: 'Home', href: 'index.html' },
     { id: 'about', label: 'About Us', href: 'about.html' },
-    { id: 'menu', label: 'Menu', href: MENU_PDF_URL, external: true },
+    { id: 'menu', label: 'Menu', href: 'menu.html' },
     { id: 'services', label: 'Our Services', href: 'services.html' },
     { id: 'catering', label: 'Catering', href: 'catering.html' },
     { id: 'contact', label: 'Contact Us', href: 'contact.html' },
@@ -186,7 +185,7 @@ function renderFooter() {
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
-              <li><a href="${MENU_PDF_URL}" target="_blank">Menu (PDF)</a></li>
+              <li><a href="menu.html">Menu</a></li>
               <li><a href="services.html">Our Services</a></li>
               <li><a href="catering.html">Catering</a></li>
               <li><a href="contact.html">Contact Us</a></li>
