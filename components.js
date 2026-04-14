@@ -53,13 +53,13 @@ function renderHeader(activePage = 'home') {
     <nav class="navbar" id="mainNav">
       <div class="nav-container">
         <a href="index.html" class="nav-logo">
-          <img src="https://tawaindiancuisine.com/assets/img/tawalog.jpeg" alt="Tawa Indian Cuisine Logo">
+          <img src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/1e7413a6-e516-4876-897f-0d32253020c7/de8c94d8-887e-4625-825f-ec262dbc28df/1776146134_yd8ypy.jpg" alt="Tawa Indian Cuisine Logo">
           <span class="logo-text">Tawa Indian Cuisine</span>
         </a>
         <ul class="nav-links" id="navLinks">
           ${navLinks}
           <li class="order-dropdown">
-            <a href="#" class="nav-link order-btn">Order Online <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg></a>
+            <button type="button" class="nav-link order-btn" aria-label="Order Online">Order Online <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg></button>
             <ul class="dropdown-menu">
               <li><a href="${UBEREATS_URL}" target="_blank" rel="noopener">UberEats</a></li>
               <li><a href="${TOAST_URL}" target="_blank" rel="noopener">Toast</a></li>
@@ -166,7 +166,7 @@ function renderFooter() {
           <!-- Brand -->
           <div class="footer-col footer-brand">
             <a href="index.html">
-              <img src="https://tawaindiancuisine.com/assets/img/tawalog.jpeg" alt="Tawa Indian Cuisine" class="footer-logo">
+              <img src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/1e7413a6-e516-4876-897f-0d32253020c7/de8c94d8-887e-4625-825f-ec262dbc28df/1776146134_yd8ypy.jpg" alt="Tawa Indian Cuisine" class="footer-logo">
             </a>
             <p class="footer-tagline">If you are craving authentic, exquisite Indian cuisine, look no further than Tawa Indian Cuisine. Our talented chefs prepare each dish with the finest ingredients, ensuring a symphony of flavors in every bite.</p>
             <div class="footer-socials">
@@ -223,10 +223,10 @@ function renderFooter() {
             </div>
             <h4 class="footer-heading" style="margin-top:1.5rem;">Order Online</h4>
             <div class="order-logos">
-              <a href="${DOORDASH_URL}" target="_blank" rel="noopener"><img src="https://tawaindiancuisine.com/assets/dd.png" alt="DoorDash"></a>
-              <a href="${UBEREATS_URL}" target="_blank" rel="noopener"><img src="https://tawaindiancuisine.com/assets/uber.png" alt="UberEats"></a>
-              <a href="${TOAST_URL}" target="_blank" rel="noopener"><img src="https://tawaindiancuisine.com/assets/toast.png" alt="Toast"></a>
-              <a href="${GRUBHUB_URL}" target="_blank" rel="noopener"><img src="https://tawaindiancuisine.com/assets/grubhubimg.png" alt="Grubhub"></a>
+              <a href="${DOORDASH_URL}" target="_blank" rel="noopener"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/1e7413a6-e516-4876-897f-0d32253020c7/de8c94d8-887e-4625-825f-ec262dbc28df/1776145967_xouwci.png" alt="DoorDash"></a>
+              <a href="${UBEREATS_URL}" target="_blank" rel="noopener"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/1e7413a6-e516-4876-897f-0d32253020c7/de8c94d8-887e-4625-825f-ec262dbc28df/1776146149_hl69by.png" alt="UberEats"></a>
+              <a href="${TOAST_URL}" target="_blank" rel="noopener"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/1e7413a6-e516-4876-897f-0d32253020c7/de8c94d8-887e-4625-825f-ec262dbc28df/1776146143_at120p.png" alt="Toast"></a>
+              <a href="${GRUBHUB_URL}" target="_blank" rel="noopener"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/1e7413a6-e516-4876-897f-0d32253020c7/de8c94d8-887e-4625-825f-ec262dbc28df/1776146013_6imrbp.png" alt="Grubhub"></a>
             </div>
           </div>
         </div>

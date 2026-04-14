@@ -218,6 +218,9 @@
      color: white !important;
      border-radius: var(--radius-sm);
      padding: 0.4rem 1rem !important;
+    border: none;
+    cursor: pointer;
+    font: inherit;
    }
    .order-btn::after { display: none !important; }
    .order-btn:hover { background: var(--terracotta) !important; color: white !important; }
@@ -493,7 +496,7 @@
      margin: 0 auto;
      display: grid;
      grid-template-columns: 2fr 1fr 1fr 1.5fr;
-     gap: 3rem;
+     gap: 2rem;
    }
    .footer-logo { height: 64px; width: 64px; border-radius: 50%; border: 2px solid var(--saffron); object-fit: cover; margin-bottom: 1rem; }
    .footer-tagline { font-size: 0.875rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1.5rem; }
@@ -696,6 +699,7 @@
      .nav-links.open { display: flex; }
      .nav-links li { width: 100%; }
      .nav-link { display: block; padding: 0.65rem 1rem; border-radius: var(--radius-sm); }
+    .nav-link.order-btn { display: inline-flex; align-items: center; gap: 0.35rem; }
      .nav-link::after { display: none; }
      .order-dropdown .dropdown-menu {
        position: static;
